@@ -1,0 +1,87 @@
+.nav { background: #1a237e; position: relative; z-index: 500; }
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.inner::-webkit-scrollbar { display: none; }
+
+.item { position: relative; }
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 18px;
+  color: rgba(255, 255, 255, 0.88);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn:hover,
+.btn.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn.repair { color: #ffa000; }
+.btn.repair:hover { background: rgba(255, 111, 0, 0.15); color: #ff6f00; }
+
+/* Mega Menu */
+.megaMenu {
+  position: fixed !important;
+  min-width: 240px;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 20px 60px rgba(26, 35, 126, 0.35);
+  border: 1px solid #e3e8f0;
+  border-top: 3px solid #1a237e;
+  padding: 12px 0;
+  z-index: 9999 !important;
+  animation: dropIn 0.18s ease;
+}
+
+.megaHeader {
+  padding: 4px 20px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #90a4ae;
+  border-bottom: 1px solid #f4f6fb;
+  margin-bottom: 4px;
+}
+
+.megaItem {
+  display: block;
+  padding: 9px 20px;
+  font-size: 13.5px;
+  color: #455a64;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
+}
+
+.megaItem:hover {
+  background: #f4f6fb;
+  color: #1a237e;
+  border-left-color: #1a237e;
+  padding-left: 24px;
+}
+
+@media (max-width: 768px) {
+  .inner { padding: 0 12px; }
+  .btn { padding: 12px 10px; font-size: 12px; gap: 4px; }
+}

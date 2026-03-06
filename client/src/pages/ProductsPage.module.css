@@ -1,0 +1,18 @@
+.hero {
+  background: linear-gradient(135deg, #1a237e, #283593);
+  padding: 40px 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.heroTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.heroSub {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+}

@@ -1,0 +1,30 @@
+.wrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: #f4f6fb;
+  border: 1.5px solid #e3e8f0;
+  border-radius: 9999px;
+  padding: 6px 16px;
+  font-size: 12.5px;
+  cursor: pointer;
+  color: #455a64;
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+.chip.active {
+  background: #1a237e;
+  border-color: #1a237e;
+  color: #fff;
+}
+
+.chip:not(.active):hover {
+  border-color: #1a237e;
+  color: #1a237e;
+  background: #e8eaf6;
+}

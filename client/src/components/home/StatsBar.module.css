@@ -1,0 +1,35 @@
+.bar {
+  background: #1a237e;
+  padding: 28px 0;
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.item { text-align: center; color: #fff; }
+
+.num {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.num span { color: #ffa000; }
+
+.label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .inner { grid-template-columns: repeat(2, 1fr); }
+}

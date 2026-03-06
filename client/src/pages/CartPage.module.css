@@ -1,0 +1,135 @@
+.page { background: #f4f6fb; min-height: 80vh; padding-bottom: 60px; }
+
+.topBar {
+  max-width: 1200px; margin: 0 auto; padding: 20px 24px 0;
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.backBtn {
+  display: flex; align-items: center; gap: 6px; background: #fff;
+  border: 1.5px solid #e3e8f0; border-radius: 8px; padding: 7px 14px;
+  font-size: 13px; font-weight: 600; cursor: pointer; color: #1a237e;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+}
+.backBtn:hover { background: #e8eaf6; }
+.pageTitle { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: #1c2333; }
+
+.layout {
+  max-width: 1200px; margin: 24px auto; padding: 0 24px;
+  display: grid; grid-template-columns: 1fr 380px; gap: 24px; align-items: start;
+}
+
+/* Items */
+.itemsList { display: flex; flex-direction: column; gap: 12px; }
+
+.cartItem {
+  background: #fff; border: 1.5px solid #e3e8f0; border-radius: 14px;
+  padding: 16px; display: flex; gap: 16px; align-items: center;
+  transition: all 0.2s;
+}
+.cartItem:hover { box-shadow: 0 4px 20px rgba(26,35,126,0.08); }
+
+.itemImg {
+  width: 88px; height: 88px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px; flex-shrink: 0; cursor: pointer;
+}
+
+.itemInfo { flex: 1; min-width: 0; }
+.itemBrand { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #90a4ae; margin-bottom: 3px; }
+.itemName { font-weight: 600; font-size: 15px; color: #1c2333; margin-bottom: 7px; cursor: pointer; }
+.itemName:hover { color: #1a237e; }
+
+.itemMeta { margin-bottom: 8px; }
+.pickupTag { display: inline-flex; align-items: center; gap: 4px; background: #e8eaf6; color: #1a237e; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 9999px; }
+.deliveryTag { display: inline-flex; align-items: center; gap: 4px; background: #fff8e1; color: #e65100; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 9999px; }
+
+.priceRow { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.itemPrice { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #1a237e; }
+.itemOrig { font-size: 12px; color: #90a4ae; text-decoration: line-through; }
+.itemDisc { font-size: 11px; font-weight: 700; color: #00897b; background: #e0f2f1; padding: 1px 7px; border-radius: 9999px; }
+
+/* Right col: qty + remove */
+.rightCol { display: flex; flex-direction: column; align-items: center; gap: 10px; flex-shrink: 0; }
+
+.qtyRow {
+  display: flex; align-items: center; gap: 0;
+  border: 1.5px solid #e3e8f0; border-radius: 8px; overflow: hidden;
+}
+.qtyBtn {
+  background: #f4f6fb; border: none; cursor: pointer; padding: 7px 11px;
+  display: flex; align-items: center; justify-content: center;
+  color: #1a237e; transition: background 0.15s;
+}
+.qtyBtn:hover:not(:disabled) { background: #e8eaf6; }
+.qtyBtn:disabled { color: #c5cae9; cursor: not-allowed; }
+.qtyNum { padding: 7px 14px; font-size: 14px; font-weight: 700; color: #1c2333; background: #fff; border-left: 1px solid #e3e8f0; border-right: 1px solid #e3e8f0; min-width: 40px; text-align: center; }
+
+.itemTotal { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 800; color: #1a237e; }
+
+.removeBtn {
+  display: flex; align-items: center; gap: 5px;
+  background: none; border: 1.5px solid #ffcdd2; border-radius: 7px;
+  padding: 5px 10px; cursor: pointer; color: #e53935; font-size: 12px; font-weight: 600;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+}
+.removeBtn:hover { background: #ffebee; }
+
+/* Summary */
+.summary {
+  background: #fff; border: 1.5px solid #e3e8f0; border-radius: 16px;
+  padding: 24px; position: sticky; top: 100px;
+}
+.summaryTitle { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: #1c2333; margin-bottom: 16px; }
+
+.summaryRows { display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px; }
+.summaryRow { display: flex; justify-content: space-between; font-size: 13px; color: #455a64; }
+.summaryName { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 200px; }
+
+.divider { border: none; border-top: 1.5px solid #f0f2f8; margin: 12px 0; }
+
+.priceBreakdown { display: flex; flex-direction: column; gap: 9px; margin-bottom: 4px; }
+.breakRow { display: flex; justify-content: space-between; font-size: 13.5px; color: #455a64; }
+.discountRow { color: #1c2333; }
+.discountAmt { color: #00897b; font-weight: 700; }
+.freeRow { color: #1c2333; }
+.freeLabel { color: #00897b; font-weight: 700; }
+
+.totalRow { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.totalLabel { font-size: 15px; font-weight: 700; color: #1c2333; }
+.totalSavings { font-size: 11px; color: #00897b; font-weight: 600; margin-top: 2px; }
+.totalPrice { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800; color: #1a237e; }
+
+.giftBanner {
+  display: flex; align-items: center; gap: 8px;
+  background: #e8eaf6; border: 1px solid #c5cae9; border-radius: 8px;
+  padding: 10px 12px; font-size: 12px; color: #1a237e; margin-bottom: 16px;
+}
+
+.checkoutBtn {
+  width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: #1a237e; color: #fff; border: none; border-radius: 10px;
+  padding: 15px; font-size: 15px; font-weight: 700; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s; margin-bottom: 12px;
+}
+.checkoutBtn:hover { background: #283593; transform: translateY(-1px); }
+.checkoutNote { font-size: 12px; color: #90a4ae; text-align: center; line-height: 1.5; }
+
+/* Empty */
+.empty { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; gap: 16px; padding: 24px; text-align: center; }
+.emptyTitle { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; color: #1c2333; }
+.emptySub { font-size: 15px; color: #90a4ae; }
+.shopBtn {
+  display: flex; align-items: center; gap: 8px; background: #1a237e; color: #fff;
+  border: none; border-radius: 10px; padding: 13px 28px; font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 8px;
+}
+.shopBtn:hover { background: #283593; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .summary { position: static; }
+}
+@media (max-width: 540px) {
+  .cartItem { flex-wrap: wrap; }
+  .rightCol { flex-direction: row; width: 100%; justify-content: space-between; }
+}
